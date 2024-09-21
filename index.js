@@ -4,6 +4,8 @@ const client = new SFNClient({ region: 'us-east-1' });
 const stateMachineARN = process.env.STATE_MACHINE_ARN;
 
 const start = (event) => {
+    console.log("event: ", event);
+    return;
     try{
         const { messages } = event;
         const params = {
